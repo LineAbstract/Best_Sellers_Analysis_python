@@ -12,22 +12,26 @@
     - year 
     - genre 
 
-#### creation_of_book_list()
-- ***(done)*** (5 points): As a data analyst, I want to instantiate a Book object for each dictionary within the “data_list” list and add the Book instantiation to a “books” list variable.  
+- ***(done)*** (5 points): As a data analyst, I want to instantiate a Book object for each dictionary within the “data_list” list and add the Book instantiation to a “books” list variable.
+    - creation_of_book_list()
 
 - ***(done)*** (5 points): As a data analyst, I want to print a message to the terminal above each evaluation question’s result explaining the original evaluation question and my findings.  
 
-#### q1: book_most_appeared()
+#### Question 1:
 - ***(done)*** (5 points): As a data analyst, I want to determine what book has been in the top 50s list for the most years and print the book’s title and the number of times it has appeared in the list to the terminal. 
+    - q1: book_most_appeared()
 
-#### q2 -> genre_most_appeared()
+#### Question 2:
 - ***(done)*** (5 points): As a data analyst, I want to determine which genre (fiction/non-fiction) has appeared the most in the top 50s list and print the result to the terminal. 
+    - q2 -> genre_most_appeared()
 
-#### q3 -> author_with_most_distinct()
+#### Question 3:
 - ***(done)*** (5 points): As a data analyst, I want to determine what author has shown up on the top 50’s list the most (only count distinct books by that author, do not include the same book in different years within the calculation) and display the author in the terminal. 
+    - q3 -> author_with_most_distinct()
 
-#### q4 -> top_book_per_year()
+#### Question 4:
 - ***(done)*** (5 points): As a data analyst, I want to display the top book for each year based on the book’s user rating and the number of reviews. Find the top book by ordering by user rating and then ordering by number of reviews. Print the year and the book’s title to the terminal. 
+    - q4 -> top_book_per_year()
 
 - ***(done)*** (10 points): As a data analyst, I want to utilize lambda functions and list comprehension within the code responsible for executing each evaluation question solution. 
  
