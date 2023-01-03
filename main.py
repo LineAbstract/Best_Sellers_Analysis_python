@@ -44,7 +44,28 @@ def book_most_appeared(books):
 # q2: 
 # which genre (fiction/non-fiction) has appeared the most in the top 50s list? print results to terminal
 def genre_most_appeared(books):
-
+    print('')
+    print('\033[4m'"This evaluation determines which genre (fiction or non-fiction) has appeared the most in the top 50s book list:"'\033[0m')
+    
+    # find len of each filtered list of genres (fiction/non-fiction)
+    number_of_fiction = len(list(filter(lambda book: book.genre == 'Fiction', books)))
+    number_of_nonfiction = len(list(filter(lambda book: book.genre == 'Non Fiction', books)))
+    
+    # set print statements
+    if number_of_fiction > number_of_nonfiction:
+        print('It has been determined that there are more fiction books than non-fiction books in the top 50s book list.')
+        print(f'No. of fiction books: {number_of_fiction}')
+        print(f'No. of non-fiction books: {number_of_nonfiction}')
+    elif number_of_nonfiction > number_of_fiction:
+        print('It has been determined that there are more non-fiction books than fiction books in the top 50s book list.')
+        print(f'No. of fiction books: {number_of_fiction}')
+        print(f'No. of non-fiction books: {number_of_nonfiction}')
+    else:
+        print('There are equal numbers of fiction and non-fiction books in the top 50s book list.')
+        print(f'No. of fiction books: {number_of_fiction}')
+        print(f'No. of non-fiction books: {number_of_nonfiction}')
+    
+    print('')
     pass
 
 # q3:
