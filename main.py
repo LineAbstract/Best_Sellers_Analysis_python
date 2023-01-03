@@ -5,12 +5,17 @@ from class_book import Book
 
 # main analysis function:
 def run_analysis(books_list):
+    print('')
+    print('Analysis commencing:')
     books = creation_of_book_list(books_list)
     book_most_appeared(books)
     genre_most_appeared(books)
     author_with_most_distinct(books)
     top_book_per_year(books)
-    
+    print('Analysis completed.')
+    print('')
+
+
 # functions:
 # instantiate a book object for each dictionary within the data list and add the book instantiation to a book list variable
 def creation_of_book_list(data_list):
@@ -44,6 +49,7 @@ def book_most_appeared(books):
 # q2: 
 # which genre (fiction/non-fiction) has appeared the most in the top 50s list? print results to terminal
 def genre_most_appeared(books):
+    print('=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~')
     print('')
     print('\033[4m'"This evaluation determines which genre (fiction or non-fiction) has appeared the most in the top 50s book list:"'\033[0m')
     
@@ -71,6 +77,7 @@ def genre_most_appeared(books):
 # q3:
 # which author has shown up on the top 50s list the most with distinct books? 
 def author_with_most_distinct(books):
+    print('=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~')
     print('')
     print('\033[4m'"This evaluation determines which author has shown up the most with distinctive titles on the top 50s book list:"'\033[0m')
     
@@ -110,11 +117,12 @@ def return_min_max_years(books):
         'min': min(list_of_years), 
         'max': max(list_of_years)
         }
-    return years\
+    return years
 
 # q4:
 # display the top book for each year based on the book's user rating & number of reviews
 def top_book_per_year(books):
+    print('=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~')
     print('')
     print('\033[4m'"This evaluation determines the yearly top rated book ordered by user ratings followed by number of reviews from the top 50s book list:"'\033[0m')
     years = return_min_max_years(books)
@@ -135,6 +143,8 @@ def top_book_per_year(books):
         
         min_year += 1
     
+    print('')
+    print('=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~')
     print('')
     pass
 

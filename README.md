@@ -33,4 +33,4 @@
  
 
 #### Bonus Stories
-- (5 points): As a data analyst, I want to determine which book has appeared the most in the top 50s list consecutively.
+- ***(to-do in future)*** (5 points): As a data analyst, I want to determine which book has appeared the most in the top 50s list consecutively.
