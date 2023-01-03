@@ -27,7 +27,7 @@
 - ***(done)*** (5 points): As a data analyst, I want to determine what author has shown up on the top 50’s list the most (only count distinct books by that author, do not include the same book in different years within the calculation) and display the author in the terminal. 
 
 #### q4 -> top_book_per_year()
-- (5 points): As a data analyst, I want to display the top book for each year based on the book’s user rating and the number of reviews. Find the top book by ordering by user rating and then ordering by number of reviews. Print the year and the book’s title to the terminal. 
+- ***(done)*** (5 points): As a data analyst, I want to display the top book for each year based on the book’s user rating and the number of reviews. Find the top book by ordering by user rating and then ordering by number of reviews. Print the year and the book’s title to the terminal. 
 
 - ***(done)*** (10 points): As a data analyst, I want to utilize lambda functions and list comprehension within the code responsible for executing each evaluation question solution. 
  

@@ -99,10 +99,43 @@ def author_with_most_distinct(books):
     print('')
     pass
 
+# min & max years for q4
+def return_min_max_years(books):
+    book_info = {}
+    for book in books:
+        book_info.update({book.id: book.year})
+    
+    list_of_years = book_info.values()
+    years = {
+        'min': min(list_of_years), 
+        'max': max(list_of_years)
+        }
+    return years\
+
 # q4:
 # display the top book for each year based on the book's user rating & number of reviews
 def top_book_per_year(books):
+    print('')
+    print('\033[4m'"This evaluation determines the yearly top rated book ordered by user ratings followed by number of reviews from the top 50s book list:"'\033[0m')
+    years = return_min_max_years(books)
+    min_year = years['min']
+    max_year = years['max']
+
+    while min_year <= max_year:
+        # filters by each year
+        each_year = list(filter(lambda book: book.year == min_year, books))
+        # sorts by user_rating
+        sorted_rating = sorted(each_year, key= lambda book: book.user_rating, reverse= True)
+        # sorts by number_of_reviews
+        sorted_number_of_reviews = sorted(sorted_rating, key= lambda book: book.number_of_reviews, reverse= True)
+        # saves top book to var
+        top_book = sorted_number_of_reviews[0]
+
+        print(f"The top book of {min_year} is \033[3m{top_book.name}\033[0m by {top_book.author}. User Rating: {top_book.user_rating} || No. Reviews: {top_book.number_of_reviews}")
+        
+        min_year += 1
     
+    print('')
     pass
 
 run_analysis(data_list)
