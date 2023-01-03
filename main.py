@@ -71,7 +71,32 @@ def genre_most_appeared(books):
 # q3:
 # which author has shown up on the top 50s list the most with distinct books? 
 def author_with_most_distinct(books):
+    print('')
+    print('\033[4m'"This evaluation determines which author has shown up the most with distinctive titles on the top 50s book list:"'\033[0m')
     
+    book_name_author = {}
+    # selects distinct book names and adds to dict
+    for book in books:
+        book_name_author.update({book.name: book.author})
+    
+    # provides list of author names with duplicates based on number of times distinct books have shown up on the list 
+    author_names_list = list(book_name_author.values())
+    
+    # adds key:value of author_name : number of times it appears with distinct books
+    author_frequency = {}
+    for author_name in author_names_list:
+        if author_name in author_frequency:
+            author_frequency[author_name] += 1
+        else:
+            author_frequency[author_name] = 1
+
+    # reverse sorting to get highest frequency value to the top
+    sorted_author_frequency = sorted(author_frequency.items(), key=lambda x:x[1], reverse= True)
+    top_author = sorted_author_frequency[0]
+    # sorted_frequency_top_author_frequency = sorted(author_frequency.items(), key=lambda x:x[1], reverse= True)[0]
+    
+    print(f"The author with most distinct titles in the top 50's list is {top_author[0]}, with {top_author[1]} distinct titles.")
+    print('')
     pass
 
 # q4:
